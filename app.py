@@ -1,5 +1,6 @@
 import os
-from flask import Flask
+import requests
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
