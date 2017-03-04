@@ -11,8 +11,8 @@ db = SQLAlchemy(app)
 from models import *
 
 @app.route('/')
-def hello():
-    return "Hello World"
+def index():
+    return render_template('index.html')
 
 @app.route('/<name>')
 def hello_name(name):
