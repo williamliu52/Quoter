@@ -56,5 +56,3 @@ docs/_build/
 # Node Stuff
 node_modules/
 
-# Webpack public files
-public/
