@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom';
 import Header from './header';
 import Container from './container';
 // importing styles
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap-typeahead/css/Typeahead.css'
 import 'react-bootstrap-typeahead/css/Token.css'
 
