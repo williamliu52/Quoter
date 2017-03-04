@@ -24,7 +24,7 @@ class Stock(db.Model):
 class Quote(db.Model):
     __tablename__ = 'quotes'
 
-    symbol = db.Column(db.String(10), db.ForeignKey('stock.name'),
+    symbol = db.Column(db.String(10), db.ForeignKey('stocks.name'),
                        unique=True, primary_key=True)
     name = db.Column(db.String(), unique=True)
     change = db.Column(db.Float())
