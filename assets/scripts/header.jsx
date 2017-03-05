@@ -13,7 +13,7 @@ class Header extends Component {
             </Navbar.Header>
             <Navbar.Collapse>
               <Navbar.Text>
-                  <Navbar.Link href="https://github.com/williamliu52/react-stocks" target="_blank">View Github</Navbar.Link>
+                  <Navbar.Link href="https://github.com/williamliu52/Quotes" target="_blank">View Github</Navbar.Link>
               </Navbar.Text>
             </Navbar.Collapse>
           </Navbar>
