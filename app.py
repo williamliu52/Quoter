@@ -25,9 +25,9 @@ queryStocks()
 def index():
     return render_template('index.html')
 
-# @app.route("/assets/<path:filename>")
-# def send_asset(filename):
-#     return send_from_directory(path.join(here, "public"), filename)
+@app.route("/assets/<path:filename>")
+def send_asset(filename):
+    return send_from_directory(path.join(here, "public"), filename)
 
 if __name__ == '__main__':
     app.run(extra_files=[app.config["WEBPACK_MANIFEST_PATH"]])

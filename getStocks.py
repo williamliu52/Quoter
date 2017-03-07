@@ -3,6 +3,7 @@ import requests
 from app import app, db
 
 def queryStocks():
+    print("Getting stocks")
     apiUrl = 'http://dev.markitondemand.com/Api/v2/Lookup/jsonp?input='
     results = {}
     errors = []
