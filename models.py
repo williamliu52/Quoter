@@ -10,11 +10,11 @@ class Stock(db.Model):
     quote = db.relationship('Quote',
         backref='stock', lazy='joined', uselist=False)
 
-    def __init__(self, symbol, name, exchange, quote):
+    def __init__(self, symbol, name, exchange):
         self.symbol = symbol,
         self.name = name,
         self.exchange = exchange,
-        self.quote = quote
+        # self.quote = quote
 
     def __repr__(self):
         s = '<Symbol: %(1)s, Name: %(2)s, Exchange: %(3)s>'
