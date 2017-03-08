@@ -8,6 +8,7 @@ class Config(object):
     CSRF_ENABLED = True
     SECRET_KEY = 'xman-102312'
     SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+    # SQLALCHEMY_ECHO = True
 
 
 class ProductionConfig(Config):
@@ -22,6 +23,7 @@ class StagingConfig(Config):
 class DevelopmentConfig(Config):
     DEVELOPMENT = True
     DEBUG = True
+    # SQLALCHEMY_ECHO = True
 
 
 class TestingConfig(Config):

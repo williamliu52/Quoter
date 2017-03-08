@@ -3,29 +3,27 @@ from app import db
 class Stock(db.Model):
     __tablename__ = 'stocks'
 
-    symbol = db.Column(db.String(10), unique=True, primary_key=True)
-    name = db.Column(db.String(), unique=True)
+    id = db.Column(db.Integer, primary_key=True)
+    symbol = db.Column(db.String(10))
+    name = db.Column(db.String())
     exchange = db.Column(db.String())
-
-    quote = db.relationship('Quote',
-        backref='stock', lazy='joined', uselist=False)
 
     def __init__(self, symbol, name, exchange):
         self.symbol = symbol,
         self.name = name,
         self.exchange = exchange,
-        # self.quote = quote
 
     def __repr__(self):
         s = '<Symbol: %(1)s, Name: %(2)s, Exchange: %(3)s>'
+        print(s)
         return s % {"1" : self.symbol, "2" : self.name, "3" : self.exchange}
 
 
 class Quote(db.Model):
     __tablename__ = 'quotes'
 
-    symbol = db.Column(db.String(10), db.ForeignKey('stocks.name'),
-                       unique=True, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
+    symbol = db.Column(db.String(10))
     name = db.Column(db.String(), unique=True)
     change = db.Column(db.Float())
     changePercent = db.Column(db.Float())
